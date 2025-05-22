@@ -56,8 +56,8 @@ const Footer = () => {
 
       <div style={{ marginTop: "1rem", fontSize: 24, cursor: "pointer" }}>
         <a href="#" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><TwitterOutlined /></a>
-        <a href="#" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><GithubOutlined /></a>
-        <a href="#" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
+        <a href="https://github.com/Komal5700" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><GithubOutlined /></a>
+        <a href="https://www.linkdin.com/in/komsl-saini-739038221/" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
       </div>
 
       <div className="social-icons">

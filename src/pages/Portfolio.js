@@ -1,7 +1,7 @@
 import './Portfolio.css';
 import { motion } from 'framer-motion';
 import Header from "../Components/Header";
-import {handleScroll} from "../Components/Header"
+import { handleScroll } from "../Components/Header"
 import Footer from '../Components/Footer';
 import Truworth from "../assests/images/logo.jpg"
 import TruworthWebsite from "../assests/images/truworth-website.jpg"
@@ -23,6 +23,7 @@ const Profile = () => {
         { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
         { name: "Storybook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "Ant Design", icon: "https://yourcdn.com/antd-icon.svg" }
     ];
 
     const experiences = [
@@ -55,11 +56,12 @@ const Profile = () => {
         { name: "Figma", url: "https://www.figma.com" },
         { name: "Storybook", url: "https://storybook.js.org" },
         { name: "Git", url: "https://git-scm.com" },
+        { name: "antd", url: "https://ant.design/"}
     ];
 
     return (
         <>
-            <Header handleScroll={handleScroll}  />
+            <Header handleScroll={handleScroll} />
             <motion.section
                 className="profile-container"
                 initial={{ opacity: 0, y: 30 }}
@@ -73,13 +75,12 @@ const Profile = () => {
                         specializing in building responsive user interfaces and optimizing front -end performance. Proven ability to create
                         engaging user experiences and contribute effectively in Agile teams. proficient in React.Js, Javascript(ES6+), HTML5, CSS3, Tailwindcss,
                         Sass/Scss, Redux, context API , Restful APIs, Unit Testing and Git Workflow
-
                     </p>
                     <p><strong>Location:</strong> Jaipur, Rajasthan</p>
                     <p><strong>Status:</strong> Available for new projects</p>
                     <div className='logos' style={{ display: "flex", gap: "1rem", marginTop: "1rem", fontSize: "1.5rem", cursor: "pointer" }}>
                         <a href="#" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none" }}><TwitterOutlined /></a>
-                        <a href="#" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none" }}><GithubOutlined /></a>
+                        <a href="https://github.com/Komal5700" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none" }}><GithubOutlined /></a>
                         <a href="https://www.linkdin.com/in/komsl-saini-739038221/" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
                     </div>
                 </div>
@@ -94,14 +95,14 @@ const Profile = () => {
             </motion.section>
 
             <motion.section id='/about' className="about-me-section"
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.7 }}
-                 viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
             >
-               
+
                 <p className="section-label">About me</p>
-              
+
                 <div className="about-me-wrapper">
                     <div className="about-me-image">
                         <img
@@ -132,7 +133,7 @@ const Profile = () => {
             </motion.section>
 
             <motion.section className="skills-section"
-            
+
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -150,7 +151,7 @@ const Profile = () => {
                                 <span>{name}</span>
                             </div>
                         ))}
-                       
+
                         {skills.map(({ name, icon }) => (
                             <div className="skill-item" key={name + '-duplicate'}>
                                 <img src={icon} alt={name} />
@@ -191,7 +192,7 @@ const Profile = () => {
                 ))}
             </motion.section>
 
-            <motion.section className="work-section" id='/work' style={{ marginTop: 40 }}>
+            <motion.section className="work-section" id='/work'>
                 <p className="section-label">Work</p>
                 <p className="work-intro">
                     Some of the noteworthy projects I have built:
@@ -237,10 +238,10 @@ const Profile = () => {
                 </div>
 
                 <div className="work-card"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
                 >
                     <div className="work-content">
                         <h3>Truwort Wellness</h3>
@@ -279,7 +280,7 @@ const Profile = () => {
                         </a>
                     </div>
                 </div>
-            </motion.section>s
+            </motion.section>
             <Footer id="/contact" />
         </>
     );

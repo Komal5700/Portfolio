@@ -1,25 +1,36 @@
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
-export const  handleScroll = (id) => {
-  console.log(id,"jnfjenfek")
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth'
-      })
-    }
+export const handleScroll = (id) => {
+  console.log(id, "jnfjenfek")
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = 100;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
   }
+}
 
-  
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) setTheme(savedTheme);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(curr => (curr === 'light' ? 'dark' : 'light'));
+  };
   return (
     <header className="header">
       <div className="header-left">
@@ -30,19 +41,32 @@ const Header = () => {
 
         <nav className="header-nav">
           <div className="nav-items-wrapper">
-
-            <ul>
-              {/* <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-              <li><a href="#work" onClick={() => setMenuOpen(false)}>Work</a></li>
-              <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li> */}
-              <p  onClick={(id) => handleScroll('/about')}> About</p>
-              <p  onClick={(id) => handleScroll('/work')}> Work</p>
-              <p  onClick={(id) => handleScroll('/contact')}> Contact</p>
+            <ul style={{ cursor: "pointer" }}>
+              <p onClick={(id) => { handleScroll('/about'); setMenuOpen(false); }}>About</p>
+              <p onClick={(id) => { handleScroll('/work'); setMenuOpen(false); }}>Work</p>
+              <p onClick={(id) => { handleScroll('/contact'); setMenuOpen(false); }}>Contact</p>
             </ul>
             <button className="download-cv" onClick={() => setMenuOpen(false)}>Download CV</button>
+            <button
+              onClick={toggleTheme}
+              style={{
+                // position: 'fixed',
+                top: 20,
+                right: 20,
+                zIndex: 999,
+                padding: '0.5rem 1rem',
+                cursor: 'pointer',
+                borderRadius: '5px',
+                border: 'none',
+                backgroundColor: theme === 'light' ? '#222' : '#eee',
+                color: theme === 'light' ? '#eee' : '#222',
+              }}
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+            </button>
           </div>
         </nav>
-
       </div>
 
       <button
@@ -50,7 +74,9 @@ const Header = () => {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
+        ☰
       </button>
+
     </header>
   );
 };

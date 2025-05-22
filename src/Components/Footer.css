@@ -15,6 +15,10 @@
     margin-bottom: 12px;
     color: #666;
   }
+  [data-theme="dark"] .get-in-touch-label {
+  background-color: #000;  /* or your desired dark bg */
+}
+
   
   .message {
     max-width: 450px;
