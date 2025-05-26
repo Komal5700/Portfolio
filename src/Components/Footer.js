@@ -1,8 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import { MailOutlined, PhoneOutlined, TwitterOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
-// import { FiMail, FiPhone, FiCopy, FiGithub, FiTwitter } from 'react-icons/fi';
-// import { SiStackoverflow } from 'react-icons/si';
 
 const Footer = () => {
   const copyToClipboard = (text) => {
@@ -35,18 +33,15 @@ const Footer = () => {
 
       <div className="social-icons">
         <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link">
-          {/* <FiGithub size={24} /> */}
         </a>
         <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link">
-          {/* <FiTwitter size={24} /> */}
         </a>
         <a href="https://stackoverflow.com/users/youruserid" target="_blank" rel="noopener noreferrer" className="social-link">
-          {/* <SiStackoverflow size={24} /> */}
         </a>
       </div>
 
       <div className="footer-copyright">
-        © 2023 | Designed and coded with <span style={{ color: 'red' }}>♥</span> by Komal Saini
+        © 2025 | Designed and coded with <span style={{ color: 'red' }}>♥</span> by Komal Saini
       </div>
     </footer>
   );

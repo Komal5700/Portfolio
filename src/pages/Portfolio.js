@@ -19,11 +19,11 @@ const Profile = () => {
         { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         { name: "Sass/Scss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
-        { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/npm/devicons@1.8.0/icons/tailwindcss/tailwindcss-plain.svg" },
+        { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
         { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
         { name: "Storybook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "Ant Design", icon: "https://yourcdn.com/antd-icon.svg" }
+        { name: "Ant Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/antdesign/antdesign-original.svg" }
     ];
 
     const experiences = [
@@ -121,10 +121,11 @@ const Profile = () => {
                         </p>
                         <p>Finally, some quick bits about me:</p>
                         <ul className="quick-bits-list">
-                            <li>B.E. in Computer Engineering</li>
-                            <li>Avid learner</li>
-                            <li>Full-time freelancer</li>
-                            <li>Aspiring indie hacker</li>
+                            <li>B.Tech in Computer Science Engineering</li>
+                            <li>Full-time Software Developed</li>
+                            <li>Front-End Developer</li>
+                            <li>Backend-End Developer (Learning Phase)</li>
+
                         </ul>
                     </div>
                 </div>
@@ -277,8 +278,6 @@ const Profile = () => {
                 </div>
             </motion.section>
 
-            {/* ...rest of your sections */}
-
             {/* Scroll to top button */}
             <button
             className='top-butoon'
@@ -307,225 +306,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-
-// import './Portfolio.css';
-// import Header from "../Components/Header";
-// import Footer from '../Components/Footer';
-// import Truworth from "../assests/images/logo.jpg";
-// import TruworthWebsite from "../assests/images/truworth-website.jpg";
-// import ThewellnessCorner from "../assests/images/the-wellness-corner.jpg";
-// import { TwitterOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
-// import { motion } from 'framer-motion';
-
-// const Profile = () => {
-//     const skills = [
-//         { name: "Javascript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-//         { name: "Typescript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-//         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-//         { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-//         { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-//         { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-//         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-//         { name: "Sass/Scss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
-//         { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/npm/devicons@1.8.0/icons/tailwindcss/tailwindcss-plain.svg" },
-//         { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-//         { name: "Storybook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" },
-//         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-//     ];
-
-//     const experiences = [
-//         {
-//             title: "Software Development",
-//             duration: "June 2023 - Present",
-//             responsibilities: [
-//                 "Developed and maintained responsive user interfaces using React.Js, Next.Js, HTML5 and Tailwind Css.",
-//                 "Updated old code base to modern standards reducing operating costs by 10-15%.",
-//                 "Utilized JavaScript (ES6+) for implementing features and handling data using RESTful APIs.",
-//                 "Collaborated within an agile framework, participating in sprint planning and stand-ups."
-//             ],
-//         },
-//         {
-//             title: "Software Development Internship",
-//             duration: "Nov 2022 - May 2023",
-//             responsibilities: [
-//                 "Developed foundational web pages and components using semantic HTML, CSS and JavaScript.",
-//                 "Gained experience with React by contributing to small features.",
-//                 "Assisted the dev team, learning Git and basic API integration.",
-//             ],
-//         },
-//     ];
-
-//     const workTags = [
-//         { name: "React", url: "https://reactjs.org" },
-//         { name: "Next.js", url: "https://nextjs.org" },
-//         { name: "Typescript", url: "https://www.typescriptlang.org" },
-//         { name: "Tailwindcss", url: "https://tailwindcss.com" },
-//         { name: "Figma", url: "https://www.figma.com" },
-//         { name: "Storybook", url: "https://storybook.js.org" },
-//         { name: "Git", url: "https://git-scm.com" },
-//     ];
-
-//     return (
-//         <>
-//             <Header />
-//             <motion.section
-//                 className="profile-container"
-//                 initial={{ opacity: 0, y: 30 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.8 }}
-//             >
-//                 <div className="profile-left">
-//                     <h1>Hi, I’m Komal <span role="img" aria-label="wave">👋</span></h1>
-//                     <p>I’m a highly skilled Front-End developer (React.js & Next.js)...</p>
-//                     <p><strong>Location:</strong> Jaipur, Rajasthan</p>
-//                     <p><strong>Status:</strong> Available for new projects</p>
-//                     <div className='logos'>
-//                         <a href="#"><TwitterOutlined /></a>
-//                         <a href="#"><GithubOutlined /></a>
-//                         <a href="#"><LinkedinOutlined /></a>
-//                     </div>
-//                 </div>
-//                 <div className="profile-right">
-//                     <motion.img
-//                         src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
-//                         alt="Profile"
-//                         className="profile-img"
-//                         initial={{ scale: 0.8, opacity: 0 }}
-//                         animate={{ scale: 1, opacity: 1 }}
-//                         transition={{ duration: 0.6 }}
-//                     />
-//                 </div>
-//             </motion.section>
-
-//             <motion.section
-//                 className="about-me-section"
-//                 initial={{ opacity: 0, y: 50 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.7 }}
-//                 viewport={{ once: true }}
-//             >
-//                 <p className="section-label">About me</p>
-//                 <div className="about-me-wrapper">
-//                     <div className="about-me-image">
-//                         <img
-//                             src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
-//                             alt="About Me"
-//                         />
-//                     </div>
-//                     <div className="about-me-content">
-//                         <h2>Curious about me? Here you have it:</h2>
-//                         <p>I'm a passionate developer...</p>
-//                         <ul className="quick-bits-list">
-//                             <li>B.E. in Computer Engineering</li>
-//                             <li>Avid learner</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </motion.section>
-
-//             <motion.section
-//                 className="skills-section"
-//                 initial={{ opacity: 0 }}
-//                 whileInView={{ opacity: 1 }}
-//                 transition={{ duration: 0.6 }}
-//                 viewport={{ once: true }}
-//             >
-//                 <p className="section-label">Skills</p>
-//                 <div className="skills-icons-container">
-//                     <div className="skills-scroll">
-//                         {skills.concat(skills).map(({ name, icon }, idx) => (
-//                             <motion.div
-//                                 className="skill-item"
-//                                 key={idx}
-//                                 whileHover={{ scale: 1.1 }}
-//                             >
-//                                 <img src={icon} alt={name} />
-//                                 <span>{name}</span>
-//                             </motion.div>
-//                         ))}
-//                     </div>
-//                 </div>
-//             </motion.section>
-
-//             <motion.section
-//                 className="experience-section"
-//                 initial={{ opacity: 0 }}
-//                 whileInView={{ opacity: 1 }}
-//                 transition={{ duration: 0.8 }}
-//                 viewport={{ once: true }}
-//             >
-//                 <p className="section-label">Experience</p>
-//                 {experiences.map(({ title, duration, responsibilities }, index) => (
-//                     <motion.div
-//                         className="experience-card"
-//                         key={index}
-//                         whileHover={{ y: -5 }}
-//                     >
-//                         <div className="experience-logo">
-//                             <img src={Truworth} alt="Company Logo" />
-//                         </div>
-//                         <div className="experience-details">
-//                             <h3>{title}</h3>
-//                             <ul>
-//                                 {responsibilities.map((item, i) => (
-//                                     <li key={i}>{item}</li>
-//                                 ))}
-//                             </ul>
-//                         </div>
-//                         <div className="experience-duration">{duration}</div>
-//                     </motion.div>
-//                 ))}
-//             </motion.section>
-
-//             <motion.section
-//                 className="work-section"
-//                 initial={{ opacity: 0 }}
-//                 whileInView={{ opacity: 1 }}
-//                 transition={{ duration: 0.7 }}
-//                 viewport={{ once: true }}
-//             >
-//                 <p className="section-label">Work</p>
-//                 <div className="work-card">
-//                     <div className="work-image">
-//                         <a href="https://www.thewellnesscorner.com/" target="_blank" rel="noopener noreferrer">
-//                             <img src={ThewellnessCorner} alt="The Wellness Corner" />
-//                         </a>
-//                     </div>
-//                     <div className="work-content">
-//                         <h3>The Wellness Corner</h3>
-//                         <p>Developed front-end pages for a wellness platform...</p>
-//                         <div className="work-tags">
-//                             {workTags.map(({ name, url }) => (
-//                                 <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="work-tag">
-//                                     {name}
-//                                 </a>
-//                             ))}
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="work-card">
-//                     <div className="work-content">
-//                         <h3>Truworth Wellness</h3>
-//                         <p>Built a responsive website from the ground up...</p>
-//                         <div className="work-tags">
-//                             {workTags.map(({ name, url }) => (
-//                                 <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="work-tag">
-//                                     {name}
-//                                 </a>
-//                             ))}
-//                         </div>
-//                     </div>
-//                     <div className="work-image">
-//                         <a href="https://www.truworthwellness.com/" target="_blank" rel="noopener noreferrer">
-//                             <img src={TruworthWebsite} alt="Truworth Wellness" />
-//                         </a>
-//                     </div>
-//                 </div>
-//             </motion.section>
-//             <Footer />
-//         </>
-//     );
-// };
-
-// export default Profile;

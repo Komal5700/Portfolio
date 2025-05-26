@@ -46,7 +46,6 @@ const Header = () => {
         <nav className="header-nav">
           <div className="nav-items-wrapper">
             <ul style={{ cursor: "pointer" }}>
-              {/* <p onClick={(id) => { handleScroll('/home'); setMenuOpen(false); }}>Home</p> */}
               <p onClick={(id) => { handleScroll('/about'); setMenuOpen(false); }}>About</p>
               <p onClick={(id) => { handleScroll('/work'); setMenuOpen(false); }}>Work</p>
               <p onClick={(id) => { handleScroll('/contact'); setMenuOpen(false); }}>Contact</p>
