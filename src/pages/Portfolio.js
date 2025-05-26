@@ -32,9 +32,9 @@ const Profile = () => {
             duration: "June 2023 Present",
             responsibilities: [
                 "Developed and maintained responsive user interfaces using React.Js, Next.Js, HTML5 and Tailwind Css, resultin in: Improved user engagement on key pages and successfull launch of several new features.",
-                "Updated old code base to modern standardsn successfully reducing operating costs by approximately 10-15% and enhancing applicaiton stability.",
+                "Updated old code base to modern standards successfully reducing operating costs by approximately 10-15% and enhancing applicaiton stability.",
                 "Utilized javascript (ES6+) for implementing features and handling data using RESTful APIs, optimizing data fetching process.",
-                "Collaborated effectively within an agile framework, participating in sprint planningn and daily stand-ups."
+                "Collaborated effectively within an agile framework, participating in sprint planning and daily stand-ups."
             ],
         },
         {

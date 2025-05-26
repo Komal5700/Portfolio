@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { saveAs } from "file-saver";
+import { Divider } from "antd";
+
 export const handleScroll = (id) => {
   console.log(id, "jnfjenfek")
   const element = document.getElementById(id);
@@ -18,10 +19,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
 
-  const downloadCV = () => {
-    saveAs("/komal_saini_pdf.pdf", "Komal_Saini_CV.pdf");
+  const openCV = () => {
+    window.open("/komal_saini_pdf.pdf", "_blank");
   };
-
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) setTheme(savedTheme);
@@ -50,27 +50,32 @@ const Header = () => {
               <p onClick={(id) => { handleScroll('/work'); setMenuOpen(false); }}>Work</p>
               <p onClick={(id) => { handleScroll('/contact'); setMenuOpen(false); }}>Contact</p>
             </ul>
-            <button className="download-cv" onClick={() => { downloadCV(); setMenuOpen(false); }}>
-              <a href="../../public/komal_saini_pdf.pdf" download style={{ color: 'inherit', textDecoration: 'none' }}>
-                Download CV
-              </a>
-            </button>
+            <Divider className="header-divider" type="vertical" />
             <button
               onClick={toggleTheme}
               style={{
                 top: 20,
                 right: 20,
                 zIndex: 999,
-                padding: '0.5rem 1rem',
+                padding: '8px 16px',
                 cursor: 'pointer',
-                borderRadius: '5px',
+                borderRadius: '18px',
                 border: 'none',
                 backgroundColor: theme === 'light' ? '#222' : '#eee',
                 color: theme === 'light' ? '#eee' : '#222',
               }}
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+              {theme === 'light' ? '🌙 ' : '☀️ '}
+            </button>
+            <button
+              className="download-cv"
+              onClick={() => {
+                openCV();
+                setMenuOpen(false);
+              }}
+              style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+              Resume
             </button>
           </div>
         </nav>
