@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-
+import { saveAs } from "file-saver";
 export const handleScroll = (id) => {
   console.log(id, "jnfjenfek")
   const element = document.getElementById(id);
@@ -18,6 +18,10 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
 
+  const downloadCV = () => {
+    saveAs("/komal_saini_pdf.pdf", "Komal_Saini_CV.pdf");
+  };
+
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) setTheme(savedTheme);
@@ -34,7 +38,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-left">
-        <a href="/">komal</a>
+        <a href="/">Komal</a>
       </div>
 
       <div className={`header-right ${menuOpen ? "open" : ""}`}>
@@ -42,15 +46,19 @@ const Header = () => {
         <nav className="header-nav">
           <div className="nav-items-wrapper">
             <ul style={{ cursor: "pointer" }}>
+              {/* <p onClick={(id) => { handleScroll('/home'); setMenuOpen(false); }}>Home</p> */}
               <p onClick={(id) => { handleScroll('/about'); setMenuOpen(false); }}>About</p>
               <p onClick={(id) => { handleScroll('/work'); setMenuOpen(false); }}>Work</p>
               <p onClick={(id) => { handleScroll('/contact'); setMenuOpen(false); }}>Contact</p>
             </ul>
-            <button className="download-cv" onClick={() => setMenuOpen(false)}>Download CV</button>
+            <button className="download-cv" onClick={() => { downloadCV(); setMenuOpen(false); }}>
+              <a href="../../public/komal_saini_pdf.pdf" download style={{ color: 'inherit', textDecoration: 'none' }}>
+                Download CV
+              </a>
+            </button>
             <button
               onClick={toggleTheme}
               style={{
-                // position: 'fixed',
                 top: 20,
                 right: 20,
                 zIndex: 999,

@@ -12,32 +12,6 @@ const Footer = () => {
 
   return (
     <footer className="footer" id='/contact'>
-      <div className="get-in-touch-label">Get in touch</div>
-      <p className="message">
-        What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.
-      </p>
-
-      {/* <div className="contact-row">
-        <a><MailOutlined /></a>
-        <strong className="contact-text">komals.5700@gmail.com</strong>
-        <FiCopy
-          size={20}
-          className="copy-icon"
-          onClick={() => copyToClipboard('reachsagarshah@gmail.com')}
-          title="Copy email"
-        />
-      </div>
-
-      <div className="contact-row">
-        <a><PhoneOutlined /></a>
-        <strong className="contact-text">+91 9828368262</strong>
-        <FiCopy
-          size={20}
-          className="copy-icon"
-          onClick={() => copyToClipboard('+91 8980500565')}
-          title="Copy phone"
-        />
-      </div> */}
 
       <div style={{ display: "flex", flexDirection: "column", alignItems:"center" }}>
         <div className="contact-row">
@@ -55,8 +29,7 @@ const Footer = () => {
       <p className="find-me-text">You may also find me on these platforms!</p>
 
       <div style={{ marginTop: "1rem", fontSize: 24, cursor: "pointer" }}>
-        <a href="#" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><TwitterOutlined /></a>
-        <a href="https://github.com/Komal5700" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><GithubOutlined /></a>
+        <a href="https://github.com/Komal5700" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none", marginRight: 10 }}><GithubOutlined /></a>
         <a href="https://www.linkdin.com/in/komsl-saini-739038221/" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
       </div>
 

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import Header from "../Components/Header";
 import { handleScroll } from "../Components/Header"
 import Footer from '../Components/Footer';
-import Truworth from "../assests/images/logo.jpg"
+import Truworth from "../assests/images/logo.svg"
 import TruworthWebsite from "../assests/images/truworth-website.jpg"
 import ThewellnessCorner from "../assests/images/the-wellness-corner.jpg"
-import { TwitterOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
+import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
 
 const Profile = () => {
 
@@ -56,7 +56,7 @@ const Profile = () => {
         { name: "Figma", url: "https://www.figma.com" },
         { name: "Storybook", url: "https://storybook.js.org" },
         { name: "Git", url: "https://git-scm.com" },
-        { name: "antd", url: "https://ant.design/"}
+        { name: "antd", url: "https://ant.design/" }
     ];
 
     return (
@@ -77,10 +77,8 @@ const Profile = () => {
                         Sass/Scss, Redux, context API , Restful APIs, Unit Testing and Git Workflow
                     </p>
                     <p><strong>Location:</strong> Jaipur, Rajasthan</p>
-                    <p><strong>Status:</strong> Available for new projects</p>
                     <div className='logos' style={{ display: "flex", gap: "1rem", marginTop: "1rem", fontSize: "1.5rem", cursor: "pointer" }}>
-                        <a href="#" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none" }}><TwitterOutlined /></a>
-                        <a href="https://github.com/Komal5700" aria-label="Twitter" style={{ color: "inherit", textDecoration: "none" }}><GithubOutlined /></a>
+                        <a href="https://github.com/Komal5700" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none" }}><GithubOutlined /></a>
                         <a href="https://www.linkdin.com/in/komsl-saini-739038221/" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
                     </div>
                 </div>
@@ -113,7 +111,7 @@ const Profile = () => {
                     <div className="about-me-content">
                         <h2>Curious about me? Here you have it:</h2>
                         <p>
-                            I’m a passionate, <a href="https://example.com" target="_blank" rel="noopener noreferrer">self-proclaimed designer</a> who specializes in Front-end development (React.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel-perfect design, and writing clear, readable, highly performant code matters to me.
+                            I’m a passionate, <a href="https://example.com" target="_blank" rel="noopener noreferrer">self-proclaimed developer</a> who specializes in Front-end development (React.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel-perfect design, and writing clear, readable, highly performant code matters to me.
                         </p>
                         <p>
                             I began my journey as a web developer in 2022, and since then, I’ve continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my thirties, 2 years after starting my web development journey, I’m building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Tailwindcss and much more.
@@ -194,9 +192,6 @@ const Profile = () => {
 
             <motion.section className="work-section" id='/work'>
                 <p className="section-label">Work</p>
-                <p className="work-intro">
-                    Some of the noteworthy projects I have built:
-                </p>
 
                 <div className="work-card">
                     <div className="work-image">
@@ -244,7 +239,7 @@ const Profile = () => {
                     viewport={{ once: true }}
                 >
                     <div className="work-content">
-                        <h3>Truwort Wellness</h3>
+                        <h3>Truworth Wellness</h3>
                         <p>
                             Build a complete, responsive website form the ground up, ensuring optimal viewing across all devices and achieving seamless user experience on both desktop and mobile plateforms.
                         </p>
@@ -281,6 +276,31 @@ const Profile = () => {
                     </div>
                 </div>
             </motion.section>
+
+            {/* ...rest of your sections */}
+
+            {/* Scroll to top button */}
+            <button
+            className='top-butoon'
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                style={{
+                    position: 'fixed',
+                    right: '20px',
+                    bottom: '40px',
+                    padding: '10px 15px',
+                    fontSize: '16px',
+                    borderRadius: '5px',
+                    border: 'none',
+                    backgroundColor: '#222',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    zIndex: 1000,
+                }}
+                aria-label="Scroll to top"
+            >
+                ↑ Top
+            </button>
+
             <Footer id="/contact" />
         </>
     );
