@@ -7,6 +7,8 @@ import Truworth from "../assests/images/logo.svg"
 import TruworthWebsite from "../assests/images/truworth-website.jpg"
 import ThewellnessCorner from "../assests/images/the-wellness-corner.jpg"
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
+import Picture from "../assests/images/profile.jpg"
+import About from "../assests/images/about.jpg"
 
 const Profile = () => {
 
@@ -85,7 +87,8 @@ const Profile = () => {
 
                 <div className="profile-right">
                     <img
-                        src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
+                        // src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
+                       src={Picture}
                         alt="Profile"
                         className="profile-img"
                     />
@@ -104,14 +107,15 @@ const Profile = () => {
                 <div className="about-me-wrapper">
                     <div className="about-me-image">
                         <img
-                            src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
+                            // src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
+                            src={About}
                             alt="About Me"
                         />
                     </div>
                     <div className="about-me-content">
                         <h2>Curious about me? Here you have it:</h2>
                         <p>
-                            I’m a passionate, <a href="https://example.com" target="_blank" rel="noopener noreferrer">self-proclaimed developer</a> who specializes in Front-end development (React.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel-perfect design, and writing clear, readable, highly performant code matters to me.
+                            I’m a passionate, <strong> Self-Proclaimed Developer</strong> who specializes in Front-end development (React.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel-perfect design, and writing clear, readable, highly performant code matters to me.
                         </p>
                         <p>
                             I began my journey as a web developer in 2022, and since then, I’ve continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my thirties, 2 years after starting my web development journey, I’m building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Tailwindcss and much more.
@@ -161,7 +165,6 @@ const Profile = () => {
                 </div>
             </motion.section>
 
-
             <motion.section className="experience-section"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -173,7 +176,7 @@ const Profile = () => {
                     Here is a quick summary of my most recent experiences:
                 </p>
 
-                {experiences.map(({ companyLogo, title, duration, responsibilities }, index) => (
+                {experiences.map(({ title, duration, responsibilities }, index) => (
                     <div className="experience-card" key={index}>
                         <div className="experience-logo">
                             <img src={Truworth} alt="Company Logo" />

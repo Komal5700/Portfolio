@@ -48,7 +48,8 @@
 }
 
 .profile-img {
-    height: 200px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -463,6 +464,12 @@
         margin-top: 20px;
     }
 
+    .profile-left{
+        order: 2;
+    }
+    .profile-right{
+        order: 1;
+    }
     .profile-left h1 {
         font-size: 2rem;
     }
@@ -476,8 +483,7 @@
     }
 
     .profile-img {
-        width: 150px;
-        height: 150px;
+        height: 182px;
         margin: 0 auto;
     }
 
@@ -585,10 +591,6 @@
 
     .work-content p {
         font-size: 1rem;
-    }
-
-    .work-tags {
-        justify-content: center;
     }
 
     .work-tag {
