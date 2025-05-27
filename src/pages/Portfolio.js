@@ -29,7 +29,7 @@ const Profile = () => {
     const experiences = [
         {
             title: "Software Development",
-            duration: "June 2023 Present",
+            duration: "June 2023 to Present",
             responsibilities: [
                 "Developed and maintained responsive user interfaces using React.Js, Next.Js, HTML5 and Tailwind Css, resultin in: Improved user engagement on key pages and successfull launch of several new features.",
                 "Updated old code base to modern standards successfully reducing operating costs by approximately 10-15% and enhancing applicaiton stability.",
@@ -39,7 +39,7 @@ const Profile = () => {
         },
         {
             title: "Software Development Internship",
-            duration: "Nov 2022 May 2023",
+            duration: "Nov 2022 to May 2023",
             responsibilities: [
                 "Developed foundational web pages and components using semantic HTML, Css and Javascript.",
                 "Gained hands-on experience with React Js by contributing to small features.",

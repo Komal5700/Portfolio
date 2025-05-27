@@ -17,7 +17,7 @@
 }
 
 [data-theme="dark"] .header-left a {
-color: white;
+  color: white;
 }
 
 .header-right {
@@ -55,15 +55,17 @@ color: white;
   transition: background-color 0.3s;
 }
 
-.header-divider{
+.header-divider {
   height: 24px;
   margin: 0;
 }
+
 @media (max-width: 768px) {
-  .header-divider{
+  .header-divider {
     display: none;
   }
 }
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -119,6 +121,7 @@ color: white;
   .header-right.open .header-nav {
     transform: translateX(0);
   }
+
   [data-theme="dark"] .header-right.open .header-nav {
     background-color: black;
   }
@@ -137,6 +140,11 @@ color: white;
     font-size: larger;
   }
 
+  [data-theme="dark"] .menu-toggle {
+    color: white;
+  }
+
+
   .header-nav ul li a {
     font-size: 1.1rem;
   }
@@ -145,7 +153,8 @@ color: white;
 .nav-items-wrapper {
   display: flex;
   align-items: center;
-  gap: 24px; /* space between nav links and button */
+  gap: 24px;
+  /* space between nav links and button */
 }
 
 .nav-items-wrapper ul p {
@@ -157,7 +166,8 @@ color: white;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 24px; /* space between links */
+  gap: 24px;
+  /* space between links */
 }
 
 .header-nav ul li a {
@@ -183,11 +193,26 @@ color: white;
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
+    align-items: flex-start;
+    max-height: 154px;
+    overflow-y: auto;
+    scrollbar-width: thin;
   }
+
+  .nav-items-wrapper::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .nav-items-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
   .header-nav ul {
     flex-direction: column;
     gap: 20px;
   }
+
   .download-cv {
     margin-top: 0;
   }
@@ -209,7 +234,12 @@ color: white;
 }
 
 /* Use these vars in your CSS */
-body, .profile-container, .about-me-section, .skills-section, .experience-section, .work-section {
+body,
+.profile-container,
+.about-me-section,
+.skills-section,
+.experience-section,
+.work-section {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -220,8 +250,11 @@ a {
 }
 
 .header-right {
-  max-height: 80vh; /* or any height you want to limit */
-  overflow-y: auto; /* enables vertical scroll when content overflows */
+  max-height: 80vh;
+  /* or any height you want to limit */
+  overflow-y: auto;
+  /* enables vertical scroll when content overflows */
   /* optional styles to improve scroll UX */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* smooth scrolling on iOS */
 }
