@@ -1,10 +1,9 @@
 .profile-container {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px 40px 0px 40px;
     background-color: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-left {
@@ -58,8 +57,7 @@
     padding: 40px 40px 0px 40px;
     background-color: #fafafa;
     border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -111,7 +109,6 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-me-content {
@@ -171,77 +168,60 @@
 }
 
 .skills-section {
-    padding: 40px;
-    background-color: #fafafa;
-    border-radius: 10px;
+    padding: 40px 40px 0px 40px;
     margin-top: 40px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
-.skills-section .section-label {
-    font-size: 0.9rem;
-    color: #888;
-    background-color: #eaeaea;
-    padding: 5px 12px;
-    border-radius: 15px;
-    width: fit-content;
-    margin: 0 auto 20px auto;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-[data-theme="dark"] .skills-section .section-label {
-    background-color: #000;
-    /* or your desired dark bg */
-}
-
 .skills-section .skills-intro {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
     margin-bottom: 40px;
+    text-align: center;
 }
 
-.skills-icons-container {
+.skills-section__title {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.skills-section__icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 60px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    cursor: default;
-    user-select: none;
+.skills-section__icon-wrapper {
+    width: 70px;
+    text-align: center;
 }
 
-.skill-item img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+.skills-section__icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 8px;
 }
 
-.skill-item span {
-    font-size: 0.9rem;
-    color: #333;
+.skills-section__icon-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
 }
 
 .experience-section {
-    padding: 40px;
+    padding: 40px 40px 0px 40px;
     background-color: #fafafa;
     border-radius: 10px;
     margin-top: 40px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
 .experience-section .section-label {
@@ -265,17 +245,23 @@
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 40px;
+    text-align: center;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .experience-card {
-    /* display: flex; */
     align-items: flex-start;
     background: white;
-    padding: 20px 30px;
-    margin-bottom: 20px;
+    padding: 30px 30px;
+    margin-bottom: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
-
+    border: 1px solid;
+    border-color: gainsboro;
 }
 
 [data-theme="dark"] .experience-card {
@@ -286,6 +272,7 @@
 .experience-logo img {
     width: 124px;
     height: auto;
+    margin-bottom: 14px;
 }
 
 [data-theme="dark"] .experience-logo {
@@ -301,7 +288,7 @@
 
 .experience-details h3 {
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 0;
     font-size: 1.15rem;
 }
 
@@ -320,16 +307,18 @@
     white-space: nowrap;
     font-size: 0.9rem;
     color: #888;
-    margin-top: 30px;
     font-weight: 700;
     flex-shrink: 0;
+}
+
+.work-section {
+    padding: 40px 40px 0px 40px;
 }
 
 .work-card {
     display: flex;
     gap: 30px;
-    padding: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -412,37 +401,6 @@
     color: #000;
 }
 
-.skills-icons-container {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.skills-scroll {
-    display: flex;
-    animation: scroll-left 15s linear infinite;
-}
-
-.skill-item {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 40px;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 /* ======= Mobile Responsive ======= */
 @media (max-width: 768px) {
 
@@ -464,12 +422,14 @@
         margin-top: 20px;
     }
 
-    .profile-left{
+    .profile-left {
         order: 2;
     }
-    .profile-right{
+
+    .profile-right {
         order: 1;
     }
+
     .profile-left h1 {
         font-size: 2rem;
     }
@@ -496,6 +456,7 @@
 
     .about-me-section {
         padding: 14px 16px;
+        margin-top: 20px;
     }
 
     .about-me-image,
@@ -510,31 +471,23 @@
     }
 
     /* Skills Section */
-    .skills-icons-container {
-        justify-content: center;
-    }
-
     .skills-section {
-        padding: 14px 16px;
-        margin-top: 10px;
+        padding: 24px 16px;
+        margin-top: 0;
     }
 
-    .skill-item {
-        width: 80px;
+    .skills-section .skills-intro {
+        margin-bottom: 24px;
     }
 
-    .skill-item img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .skill-item span {
-        font-size: 0.85rem;
+    .skills-section__icons {
+        gap: 10px;
     }
 
     /* Experience Section */
     .experience-section {
         padding: 24px 16px;
+        margin-top: 20px;
     }
 
     .experience-section .experience-intro {
@@ -546,11 +499,17 @@
         align-items: center;
         text-align: center;
         padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .experience-header {
+        display: block;
+        text-align: center;
     }
 
     .experience-logo img {
-        width: 70px;
-        margin: 0 0 12px 0;
+        width: 110px;
+        height: auto;
     }
 
     .experience-details {
@@ -564,7 +523,12 @@
 
     /* Work Section */
     .work-section {
-        padding: 24px 16px;
+        padding: 24px 16px
+    }
+
+    .work-section .section-label {
+        margin: 0;
+        text-align: center;
     }
 
     .work-card {
@@ -597,18 +561,6 @@
         font-size: 0.8rem;
         padding: 6px 12px;
     }
-}
-
-.skill-item {
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.skill-item:hover {
-    transform: scale(1.05);
 }
 
 .experience-card {

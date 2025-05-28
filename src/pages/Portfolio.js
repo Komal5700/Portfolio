@@ -9,8 +9,31 @@ import ThewellnessCorner from "../assests/images/the-wellness-corner.jpg"
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
 import Picture from "../assests/images/profile.jpg"
 import About from "../assests/images/about.jpg"
+import { useState, useEffect } from 'react';
 
 const Profile = () => {
+
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    useEffect(() => {
+        const homeSection = document.getElementById("/home");
+
+        if (!homeSection) {
+            setShowScrollButton(true); // show button if #home missing
+            return;
+        }
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                // If #home is visible, hide button; if not visible, show button
+                setShowScrollButton(!entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(homeSection);
+
+        return () => observer.disconnect();
+    }, []);
 
     const skills = [
         { name: "Javascript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -65,6 +88,7 @@ const Profile = () => {
         <>
             <Header handleScroll={handleScroll} />
             <motion.section
+                id='/home'
                 className="profile-container"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -88,7 +112,7 @@ const Profile = () => {
                 <div className="profile-right">
                     <img
                         // src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
-                       src={Picture}
+                        src={Picture}
                         alt="Profile"
                         className="profile-img"
                     />
@@ -135,7 +159,7 @@ const Profile = () => {
                 </div>
             </motion.section>
 
-            <motion.section className="skills-section"
+            {/* <motion.section className="skills-section"
 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -163,14 +187,24 @@ const Profile = () => {
                         ))}
                     </div>
                 </div>
-            </motion.section>
+            </motion.section> */}
 
-            <motion.section className="experience-section"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-            >
+            <section className="skills-section">
+                <p className="section-label">Skills</p>
+                <p className="skills-intro">
+                    The skills, tools and technologies I am really good at:
+                </p>
+                <div className="skills-section__icons">
+                    {skills.map(({ name, icon }) => (
+                        <div key={name} className="skills-section__icon-wrapper">
+                            <img src={icon} alt={name} className="skills-section__icon" />
+                            <p className="skills-section__icon-label">{name}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section id='/experience' className="experience-section">
                 <p className="section-label">Experience</p>
                 <p className="experience-intro">
                     Here is a quick summary of my most recent experiences:
@@ -182,17 +216,19 @@ const Profile = () => {
                             <img src={Truworth} alt="Company Logo" />
                         </div>
                         <div className="experience-details">
-                            <h3>{title}</h3>
+                            <div className='experience-header'>
+                                <h3>{title}</h3>
+                                <div className="experience-duration">{duration}</div>
+                            </div>
                             <ul>
                                 {responsibilities.map((item, i) => (
                                     <li key={i}>{item}</li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="experience-duration">{duration}</div>
                     </div>
                 ))}
-            </motion.section>
+            </section>
 
             <motion.section className="work-section" id='/work'>
                 <p className="section-label">Work</p>
@@ -282,26 +318,29 @@ const Profile = () => {
             </motion.section>
 
             {/* Scroll to top button */}
-            <button
-            className='top-butoon'
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                style={{
-                    position: 'fixed',
-                    right: '20px',
-                    bottom: '40px',
-                    padding: '10px 15px',
-                    fontSize: '16px',
-                    borderRadius: '5px',
-                    border: 'none',
-                    backgroundColor: '#222',
-                    color: '#fff',
-                    cursor: 'pointer',
-                    zIndex: 1000,
-                }}
-                aria-label="Scroll to top"
-            >
-                ↑ Top
-            </button>
+
+            {showScrollButton && (
+                <button
+                    className="top-butoon"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    style={{
+                        position: "fixed",
+                        right: "20px",
+                        bottom: "40px",
+                        padding: "10px 15px",
+                        fontSize: "16px",
+                        borderRadius: "19px",
+                        border: "none",
+                        backgroundColor: "#222",
+                        color: "#fff",
+                        cursor: "pointer",
+                        zIndex: 1000,
+                    }}
+                    aria-label="Scroll to top"
+                >
+                    ↑
+                </button>
+            )}
 
             <Footer id="/contact" />
         </>

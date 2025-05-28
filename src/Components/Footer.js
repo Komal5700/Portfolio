@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-copyright">
-        © 2025 | Designed and coded with <span style={{ color: 'red' }}>♥</span> by Komal Saini
+        © 2025 | Designed and coded by Komal Saini
       </div>
     </footer>
   );
