@@ -80,16 +80,6 @@
     background-color: #000;
 }
 
-.work-intro {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 40px;
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .about-me-wrapper {
     display: flex;
     gap: 100px;
@@ -524,11 +514,6 @@
     /* Work Section */
     .work-section {
         padding: 24px 16px
-    }
-
-    .work-section .section-label {
-        margin: 0;
-        text-align: center;
     }
 
     .work-card {
