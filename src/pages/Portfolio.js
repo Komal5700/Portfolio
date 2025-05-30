@@ -7,6 +7,7 @@ import Truworth from "../assests/images/logo.svg"
 import TruworthWebsite from "../assests/images/truworth-website.jpg"
 import ThewellnessCorner from "../assests/images/the-wellness-corner.jpg"
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
+import {Divider} from "antd";
 import Picture from "../assests/images/profile.jpg"
 import About from "../assests/images/about.jpg"
 import { useState, useEffect } from 'react';
@@ -107,11 +108,10 @@ const Profile = () => {
                         <a href="https://github.com/Komal5700" aria-label="GitHub" style={{ color: "inherit", textDecoration: "none" }}><GithubOutlined /></a>
                         <a href="https://www.linkdin.com/in/komsl-saini-739038221/" aria-label="Dribbble" style={{ color: "inherit", textDecoration: "none" }}><LinkedinOutlined /></a>
                     </div>
-                </div>
+                </div>  
 
                 <div className="profile-right">
                     <img
-                        // src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
                         src={Picture}
                         alt="Profile"
                         className="profile-img"
@@ -131,7 +131,6 @@ const Profile = () => {
                 <div className="about-me-wrapper">
                     <div className="about-me-image">
                         <img
-                            // src="https://cdn-thewellnesscorner.s3.ap-southeast-1.amazonaws.com/WeeklyNewsletterImages/protecting-your-emotional-wellness_202505091053499421.jpg"
                             src={About}
                             alt="About Me"
                         />
@@ -153,41 +152,10 @@ const Profile = () => {
                             <li>Full-time Software Developed</li>
                             <li>Front-End Developer</li>
                             <li>Backend-End Developer (Learning Phase)</li>
-
                         </ul>
                     </div>
                 </div>
             </motion.section>
-
-            {/* <motion.section className="skills-section"
-
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-            >
-                <p className="section-label">Skills</p>
-                <p className="skills-intro">
-                    The skills, tools and technologies I am really good at:
-                </p>
-                <div className="skills-icons-container">
-                    <div className="skills-scroll">
-                        {skills.map(({ name, icon }) => (
-                            <div className="skill-item" key={name}>
-                                <img src={icon} alt={name} />
-                                <span>{name}</span>
-                            </div>
-                        ))}
-
-                        {skills.map(({ name, icon }) => (
-                            <div className="skill-item" key={name + '-duplicate'}>
-                                <img src={icon} alt={name} />
-                                <span>{name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </motion.section> */}
 
             <section className="skills-section">
                 <p className="section-label">Skills</p>
@@ -317,11 +285,13 @@ const Profile = () => {
                 </div>
             </motion.section>
 
+            <Divider type='horizontal' className='divider' style={{margin:0}}/>
+
             {/* Scroll to top button */}
 
             {showScrollButton && (
                 <button
-                    className="top-butoon"
+                    className="top"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     style={{
                         position: "fixed",

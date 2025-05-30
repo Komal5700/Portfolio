@@ -341,12 +341,12 @@
 }
 
 [data-theme="dark"] .work-content {
-    background-color: #000;
+    background-color: #121212;
     color: white;
 }
 
 [data-theme="dark"] .work-image {
-    background-color: #000;
+    background-color: #121212;
 }
 
 .work-content h3 {
@@ -611,6 +611,11 @@ footer,
     color: #fff !important;
 }
 
-[data-theme="dark"] p {
-    background-color: #000;
+[data-theme="dark"] .top{
+color: black !important;
+background-color: #fafafa !important;
+}
+
+[data-theme="dark"] .divider{
+    background-color: darkgray;
 }

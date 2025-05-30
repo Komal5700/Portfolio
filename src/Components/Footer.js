@@ -1,12 +1,7 @@
-import React from 'react';
 import './Footer.css';
-import { MailOutlined, PhoneOutlined, TwitterOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
+import { MailOutlined, PhoneOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
 
 const Footer = () => {
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    alert(`Copied: ${text}`);
-  };
 
   return (
     <footer className="footer" id='/contact'>
@@ -22,7 +17,6 @@ const Footer = () => {
           <strong className="contact-text">+91 9828368262</strong>
         </div>
       </div>
-
 
       <p className="find-me-text">You may also find me on these platforms!</p>
 
